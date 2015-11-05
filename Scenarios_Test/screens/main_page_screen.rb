@@ -22,8 +22,6 @@ def wait_for_screen(timeout = 20)
     while (timeout > 0)
       if (screen_exists?)
         puts "Screen Found!!!"
-        # Wait until the CRM image appears
-        trace_sleep(5) if is_android?
         return
       end
       alert_saved = check_alerts alert_saved
